@@ -1,0 +1,58 @@
+homepage:
+- homepage banners
+- homepage all movies
+- detail movies
+- list categories
+
+editor picks:
+- banner
+- title
+- rating
+- total reviews
+
+all movies:
+- banner
+- rating
+- title
+- year
+- category
+
+detail movie:
+- title
+- rating
+- reviews
+- total reviews
+- synopsis
+- release date
+- actors
+
+
+table movies:
+- id
+- title
+- banner
+- release_date
+- youtube_link
+- category_id
+
+table categories:
+- id
+- name
+
+table reviews:
+- id
+- movie_id
+- user_id
+- rating
+- review
+
+table actors:
+- id
+- name
+- photo
+
+table watchlists:
+- id
+- user_id
+- movie_id
+
