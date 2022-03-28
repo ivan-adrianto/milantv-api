@@ -5,6 +5,6 @@ const watchlistsHandler = require('./handlers/watchlists');
 
 router.get('/:id', watchlistsHandler.get);
 router.post('/', watchlistsHandler.create);
-router.delete('/:id', watchlistsHandler.destroy);
+router.delete('/', watchlistsHandler.destroy);
 
 module.exports = router;

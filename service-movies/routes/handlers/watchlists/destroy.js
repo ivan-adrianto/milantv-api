@@ -4,12 +4,13 @@ const v = new Validator();
 watchlist.hasOne(movie, { foreignKey: "id", sourceKey: "movie_id" });
 module.exports = async (req, res) => {
   try {
-    const { id } = req.params;
+    const { user_id, movie_id } = req.query;
     const schema = {
-      id: "string|empty:false",
+      user_id: "string|empty:false",
+      movie_id: "string|empty:false",
     };
 
-    const validate = v.validate(req.params, schema);
+    const validate = v.validate(req.query, schema);
 
     if (validate.length) {
       return res.status(400).json({
@@ -19,7 +20,7 @@ module.exports = async (req, res) => {
     }
 
     const data = await watchlist.destroy({
-      where: { id },
+      where: { movie_id, user_id },
     });
     if (!data) {
       return res.status(404).json({
@@ -30,7 +31,7 @@ module.exports = async (req, res) => {
     res.json({
       status: "success",
       message: `The movie has been removed from your watchlist`,
-      data,
+      data: [],
     });
   } catch (error) {
     res.status(500).json({

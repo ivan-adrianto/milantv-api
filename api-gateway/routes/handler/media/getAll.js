@@ -7,7 +7,6 @@ const api = apiAdapter(URL_SERVICE_MEDIA);
 
 module.exports = async (req, res) => {
   try {
-    console.log('URL_SERV', URL_SERVICE_MEDIA)
     const media = await api.get('/media');
     return res.json(media.data);
   } catch (error) {
