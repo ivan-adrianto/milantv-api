@@ -5,8 +5,6 @@ const {
 
 module.exports = async (req, res) => {
   const userId = req.body.user_id;
-  console.log('req.body', req.body)
-  console.log('userId', userId)
   const user = await User.findByPk(userId);
 
   if (!user) {

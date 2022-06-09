@@ -9,7 +9,6 @@ const { Media } = require('../models');
 const { HOSTNAME } = process.env;
 
 router.get('/', async(req, res) => {
-  console.log('HOSTNAME', HOSTNAME)
   const media = await Media.findAll({
     attributes: ['id', 'image']
   });

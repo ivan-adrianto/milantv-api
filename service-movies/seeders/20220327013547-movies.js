@@ -33,6 +33,36 @@ module.exports = {
         total_reviews: 0,
         total_comments: 0,
       },
+      {
+        id: 3,
+        title: "The Dark Knight",
+        banner:
+          "http://image.tmdb.org/t/p/w185/nMKdUUepR0i5zn0y1T4CsSB5chy.jpg",
+        synopsis:
+          "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+        release_date: "2008-07-14",
+        youtube_link: "https://www.youtube.com/watch?v=EXeTwQWrcwY",
+        category_id: 18,
+        rating: 0,
+        total_rating: 0,
+        total_reviews: 0,
+        total_comments: 0,
+      },
+      {
+        id: 4,
+        title: "Turning Red",
+        banner:
+          "http://image.tmdb.org/t/p/w185/fOy2Jurz9k6RnJnMUMRDAgBwru2.jpg",
+        synopsis:
+          "Thirteen-year-old Mei is experiencing the awkwardness of being a teenager with a twist – when she gets too excited, she transforms into a giant red panda.",
+        release_date: "2022-03-01",
+        youtube_link: "https://www.youtube.com/watch?v=XdKzUbAiswE",
+        category_id: 10751,
+        rating: 0,
+        total_rating: 0,
+        total_reviews: 0,
+        total_comments: 0,
+      },
     ]);
   },
 

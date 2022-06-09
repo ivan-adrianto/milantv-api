@@ -147,6 +147,150 @@ module.exports = {
         created_at: new Date(),
         updated_at: new Date(),
       },
+      {
+        id: 17,
+        movie_id: 3,
+        name: "Christian Bale",
+        photo:
+          "http://image.tmdb.org/t/p/w185/qCpZn2e3dimwbryLnqxZuI88PTi.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 18,
+        movie_id: 3,
+        name: "Heath Ledger",
+        photo:
+          "http://image.tmdb.org/t/p/w185/5Y9HnYYa9jF4NunY9lSgJGjSe8E.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 19,
+        movie_id: 3,
+        name: "Michael Caine",
+        photo:
+          "http://image.tmdb.org/t/p/w185/hZruclwEPCKw3e83rnFSIH5sRFZ.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 20,
+        movie_id: 3,
+        name: "Gary Oldman",
+        photo:
+          "http://image.tmdb.org/t/p/w185/2v9FVVBUrrkW2m3QOcYkuhq9A6o.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 21,
+        movie_id: 3,
+        name: "Aaron Eckhart",
+        photo:
+          "http://image.tmdb.org/t/p/w185/5EFQvRHlpP1Iaw2e6vjOaBny6DV.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 22,
+        movie_id: 3,
+        name: "Maggie Gyllenhaal",
+        photo:
+          "http://image.tmdb.org/t/p/w185/qxgM5LzzG4uWTprCL3gBVVJ2Q1K.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 23,
+        movie_id: 3,
+        name: "Morgan Freeman",
+        photo:
+          "http://image.tmdb.org/t/p/w185/oIciQWr8VwKoR8TmAw1owaiZFyb.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 24,
+        movie_id: 3,
+        name: "Nestor Carbonell",
+        photo:
+          "http://image.tmdb.org/t/p/w185/wAk4Me2INiNSpRvzU8K98743Uc1.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 31,
+        movie_id: 4,
+        name: "Rosalie Chiang",
+        photo:
+          "http://image.tmdb.org/t/p/w185/cbEWkQM0FS9vzv07JFErCk0YKkx.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 25,
+        movie_id: 4,
+        name: "Sandra Oh",
+        photo:
+          "http://image.tmdb.org/t/p/w185/zU8vjebHxcP60ESEL5Ok68KWZvj.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 26,
+        movie_id: 4,
+        name: "Ava Morse",
+        photo:
+          "http://image.tmdb.org/t/p/w185/e3bkf5MHPzqvSrJALr78pp0DCWt.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 27,
+        movie_id: 4,
+        name: "Hyein Park",
+        photo:
+          "http://image.tmdb.org/t/p/w185/aud7tBslfKn2qIrKCbltxpXoOTi.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 28,
+        movie_id: 4,
+        name: "Maitreyi Ramakrishnan",
+        photo:
+          "http://image.tmdb.org/t/p/w185/jBFqjwvngaz6ZXEhNd6dMeZ0W6c.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 29,
+        movie_id: 4,
+        name: "Orion Lee",
+        photo:
+          "http://image.tmdb.org/t/p/w185/glWRdpNnOj9JBmrbiCuvUWkBejf.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 30,
+        movie_id: 4,
+        name: "Wai Ching Ho",
+        photo:
+          "http://image.tmdb.org/t/p/w185/sbEwwkKVcLJRi02ZCqx8JymmbTm.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        id: 32,
+        movie_id: 4,
+        name: "Tristan Allerick Chen",
+        photo:
+          "http://image.tmdb.org/t/p/w185/zFqLvvVEk4q8RgCDAKXxUahwZ7n.jpg",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
     ]);
   },
 

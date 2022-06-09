@@ -7,7 +7,7 @@ const verifyToken = require('../middlewares/verifyToken');
 const mediaHandler = require('./handler/media');
 
 
-router.post('/', verifyToken, mediaHandler.create);
+router.post('/', mediaHandler.create);
 router.get('/', mediaHandler.getAll);
 router.delete('/:id', mediaHandler.destroy);
 
