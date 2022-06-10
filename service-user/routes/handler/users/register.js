@@ -75,6 +75,11 @@ module.exports = async (req, res) => {
       status: "success",
       data: {
         id: createdUser.id,
+        fullname: createdUser.fullname,
+        email: createdUser.email,
+        role: createdUser.role,
+        avatar: createdUser.avatar,
+        username: createdUser.username,
       },
     });
   } catch (error) {
