@@ -6,7 +6,7 @@ const api = apiAdapter(URL_SERVICE_MOVIE);
 module.exports = async (req, res) => {
   try {
     const categories = await api.get("/categories");
-    return res.json(categories.data);
+    return res.json({ status: "success", data: categories.data.data });
   } catch (error) {
     if (error.code === "ECONNREFUSED") {
       return res
