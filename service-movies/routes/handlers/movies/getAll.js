@@ -1,29 +1,19 @@
+const { Op } = require("sequelize");
 const { movie, category } = require("../../../models");
 movie.hasOne(category, { foreignKey: "id", sourceKey: "category_id" });
 
 module.exports = async (req, res) => {
+  const category_id = req.query.category_id || "";
+  const title = req.query.title || "";
   try {
-    if (req.query.category) {
-      const movies = await movie.findAll({
-        where: { category_id: req.query.category },
-        include: [{ model: category }],
-        attributes: [
-          "id",
-          "title",
-          "banner",
-          "release_date",
-          "total_comments",
-          "rating",
-        ],
-      });
-      return res.status(200).send(movies);
-    }
     const movies = await movie.findAll({
+      where: { category_id: { [Op.like]: `%${category_id}%` }, title: { [Op.like]: `%${title}%` } },
       include: [{ model: category }],
       attributes: [
         "id",
         "title",
         "banner",
+        "synopsis",
         "release_date",
         "total_comments",
         "rating",
