@@ -17,6 +17,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
       },
       {
         id: 2,
@@ -32,6 +34,7 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster: "https://cdn1-production-images-kly.akamaized.net/T-qAsWUMuNByWoYmePnLBIpkYqM=/640x853/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3594218/original/052642100_1633507720-243335083_1024199508376654_4800931753752397272_n.jpg",
       },
       {
         id: 3,
@@ -47,6 +50,7 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster: "http://image.tmdb.org/t/p/w300/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
       },
       {
         id: 4,
@@ -62,6 +66,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg",
       },
       {
         id: 5,
@@ -77,6 +83,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/6JjfSchsU6daXk2AKX8EEBjO3Fm.jpg",
       },
       {
         id: 6,
@@ -92,6 +100,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/tlZpSxYuBRoVJBOpUrPdQe9FmFq.jpg",
       },
       {
         id: 7,
@@ -107,6 +117,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/jrgifaYeUtTnaH7NF5Drkgjg2MB.jpg",
       },
       {
         id: 8,
@@ -122,6 +134,7 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster: "http://image.tmdb.org/t/p/w300/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg",
       },
       {
         id: 9,
@@ -137,6 +150,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/neMZH82Stu91d3iqvLdNQfqPPyl.jpg",
       },
       {
         id: 10,
@@ -147,11 +162,13 @@ module.exports = {
           "Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history’s most fearsome creatures.",
         release_date: "2022-06-01",
         youtube_link: "https://www.youtube.com/watch?v=fb5ELWi-ekk",
-        category_id: 28,
+        category_id: 12,
         rating: 0,
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg",
       },
       {
         id: 11,
@@ -167,6 +184,7 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster: "http://image.tmdb.org/t/p/w300/QaNLpq3Wuu2yp5ESsXYcQCOpUk.jpg",
       },
       {
         id: 12,
@@ -182,6 +200,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/zhLKlUaF1SEpO58ppHIAyENkwgw.jpg",
       },
       {
         id: 13,
@@ -197,6 +217,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
       },
       {
         id: 14,
@@ -212,6 +234,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/kRpKJstAW7DsoPAEBW2Kk1uD9Q6.jpg",
       },
       {
         id: 15,
@@ -227,6 +251,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/74xTEgt7R36Fpooo50r9T25onhq.jpg",
       },
       {
         id: 16,
@@ -242,6 +268,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/luMC56bwZqaECYRz6X7sXjqN6nd.jpg",
       },
       {
         id: 17,
@@ -251,12 +279,14 @@ module.exports = {
         synopsis:
           "A disgraced parole officer is indebted to a local gang leader and forced to pull off a series of dangerous drug heists within twelve hours in order to pay the $2 million dollars he owes, rescue his kidnapped pregnant wife, and settle a score with the city's corrupt police chief, who is working with the gang leader and double-crossed him years ago.",
         release_date: "2022-03-04",
-        youtube_link: "",
+        youtube_link: "https://www.youtube.com/watch?v=JnFQv6hnUuU",
         category_id: 28,
         rating: 0,
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/8Kce1utfytAG5m1PbtVoDzmDZJH.jpg",
       },
       {
         id: 18,
@@ -272,6 +302,8 @@ module.exports = {
         total_rating: 0,
         total_reviews: 0,
         total_comments: 0,
+        poster:
+          "http://image.tmdb.org/t/p/w300/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg",
       },
     ]);
   },

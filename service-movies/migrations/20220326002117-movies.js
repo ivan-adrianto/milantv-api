@@ -21,6 +21,10 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
+      poster: {
+        type: Sequelize.TEXT,
+        allowNull: true,
+      },
       release_date: {
         type: Sequelize.STRING,
         allowNull: false,
