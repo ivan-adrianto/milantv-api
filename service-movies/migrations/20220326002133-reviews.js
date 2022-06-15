@@ -21,6 +21,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
+      title: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
       comment: {
         type: Sequelize.STRING,
         allowNull: true

@@ -4,7 +4,7 @@ const v = new Validator();
 review.hasOne(movie, { foreignKey: "id", sourceKey: "movie_id" });
 module.exports = async (req, res) => {
   try {
-    const { movie_id, user_id, rating, comment } = req.body;
+    const { movie_id, user_id, rating, comment, title } = req.body;
     const schema = {
       movie_id: "number|empty:false",
       user_id: "number|empty:false",
@@ -47,6 +47,7 @@ module.exports = async (req, res) => {
       movie_id,
       user_id,
       rating,
+      title,
       comment,
     });
     await dataMovie.update({
@@ -63,6 +64,7 @@ module.exports = async (req, res) => {
       status: "success",
       data: {
         rating,
+        title,
         comment,
       },
     });

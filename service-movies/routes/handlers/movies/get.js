@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
     const movies = await movie.findOne({
       include: [{ model: category }],
       where: { id },
-      attributes: ["id", "title", "banner", "release_date", "youtube_link", "poster", "rating", "total_comments"],
+      attributes: ["id", "title", "banner", "release_date", "youtube_link", "poster", "synopsis", "rating", "total_comments"],
     });
     if (movies === null) {
       return res.status(404).json({
