@@ -5,7 +5,7 @@ const api = apiAdapter(URL_SERVICE_MOVIE);
 
 module.exports = async (req, res) => {
   try {
-    const review = await api.get(`/reviews/my-reviews?user_id=${req.user.data.id}`);
+    const review = await api.get(`/reviews/my-reviews/${req.params.movieId}?user_id=${req.user.data.id}`);
     return res.json(review.data);
   } catch (error) {
     if (error.code === "ECONNREFUSED") {

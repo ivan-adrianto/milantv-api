@@ -10,6 +10,7 @@ router.get("/search-category", moviesHandler.getMovieByCategory)
 router.get("/categories", moviesHandler.getCategories);
 router.get("/:id", verifyToken, moviesHandler.getMovieById);
 router.get("/reviews/my-reviews", verifyToken, moviesHandler.getMyReviews);
+router.get("/reviews/my-reviews/:movieId", verifyToken, moviesHandler.getReviewDetail);
 router.get("/reviews/:id", moviesHandler.getReviews);
 router.post("/reviews", verifyToken, moviesHandler.createReview);
 router.put("/reviews", verifyToken, moviesHandler.updateReview);
