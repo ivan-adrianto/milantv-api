@@ -1,5 +1,5 @@
 const { URL_SERVICE_USER } = process.env;
-const { review } = require("../../../models");
+const { review, movie } = require("../../../models");
 const apiAdapter = require("../../apiAdapter");
 
 const api = apiAdapter(URL_SERVICE_USER);
@@ -9,6 +9,7 @@ module.exports = async (req, res) => {
     const reviews = await review.findAll({
       where: { user_id: req.query.user_id },
       attributes: ["id" ,"rating", "comment", "user_id"],
+      include: [{ model: movie }],
     });
 
     res.json({
