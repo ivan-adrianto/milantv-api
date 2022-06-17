@@ -51,7 +51,7 @@ module.exports = async (req, res) => {
       comment,
     });
     await dataMovie.update({
-      total_rating: dataMovie.total_rating + 1,
+      total_rating: dataMovie.total_rating + rating,
       rating:
         (dataMovie.rating * dataMovie.total_reviews + rating) /
         (dataMovie.total_reviews + 1),

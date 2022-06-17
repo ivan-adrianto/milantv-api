@@ -1,8 +1,4 @@
-const { URL_SERVICE_USER } = process.env;
 const { review, movie } = require("../../../models");
-const apiAdapter = require("../../apiAdapter");
-
-const api = apiAdapter(URL_SERVICE_USER);
 
 module.exports = async (req, res) => {
   try {

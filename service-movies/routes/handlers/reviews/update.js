@@ -1,4 +1,4 @@
-const { review } = require("../../../models");
+const { review, movie } = require("../../../models");
 const Validator = require("fastest-validator");
 const v = new Validator();
 
@@ -19,17 +19,50 @@ module.exports = async (req, res) => {
       });
     }
 
-    const data = await review.findOne({
-      where: { id: movie_id },
+    const dataReview = await review.findOne({
+      where: { movie_id, user_id },
     });
-    if (!data) {
+    if (!dataReview) {
       return res.status(404).json({
         status: "error",
         message: "review not found",
       });
     }
 
-    await data.update({
+    const dataMovie = await movie.findOne({
+      where: { id: movie_id },
+    });
+
+    let totalComments = dataMovie.total_comments;
+    if (
+      ((comment || title) && dataReview.dataValues.comment) ||
+      dataReview.dataValues.title
+    ) {
+      totalComments = dataMovie.total_comments;
+    } else if (
+      (comment || title) &&
+      !dataReview.dataValues.comment &&
+      !dataReview.dataValues.title
+    ) {
+      totalComments = dataMovie.total_comments + 1;
+    } else if (
+      !comment &&
+      !title &&
+      dataReview.dataValues.comment &&
+      dataReview.dataValues.title
+    ) {
+      totalComments = dataMovie.total_comments - 1;
+    }
+    await dataMovie.update({
+      total_rating:
+        dataMovie.total_rating - dataReview.dataValues.rating + rating,
+      rating:
+        (dataMovie.total_rating - dataReview.dataValues.rating + rating) /
+        dataMovie.total_reviews,
+      total_comments: totalComments,
+    });
+
+    await dataReview.update({
       rating,
       title,
       comment,

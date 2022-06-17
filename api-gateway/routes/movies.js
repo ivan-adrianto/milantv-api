@@ -14,6 +14,7 @@ router.get("/reviews/my-reviews/:movieId", verifyToken, moviesHandler.getReviewD
 router.get("/reviews/:id", moviesHandler.getReviews);
 router.post("/reviews", verifyToken, moviesHandler.createReview);
 router.put("/reviews", verifyToken, moviesHandler.updateReview);
+router.delete("/reviews/:id", verifyToken, moviesHandler.deleteReview);
 router.get("/actors/:id", moviesHandler.getActors);
 router.post("/watchlists", verifyToken, moviesHandler.createWatchlist);
 router.delete("/watchlists", verifyToken, moviesHandler.deleteWatchlist);
