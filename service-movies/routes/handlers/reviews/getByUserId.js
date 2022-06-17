@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
   try {
     const reviews = await review.findAll({
       where: { user_id: req.query.user_id },
-      attributes: ["id" ,"rating", "comment", "user_id"],
+      attributes: ["id" ,"rating", "comment", "user_id", "created_at", "updated_at"],
       include: [{ model: movie }],
     });
 
