@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
     const movie_id = dataReview.dataValues.movie_id;
     await review.destroy({ where: { id } });
 
-    const dataMovie = await movie.findOne({ id: movie_id });
+    const dataMovie = await movie.findOne({ where: {id: movie_id} });
     const prevData = dataMovie.dataValues;
     await dataMovie.update({
       total_rating: prevData.total_rating - dataReview.dataValues.rating,
@@ -34,7 +34,7 @@ module.exports = async (req, res) => {
           dataReview.dataValues.rating) /
         (prevData.total_reviews - 1),
       total_reviews: prevData.total_reviews - 1,
-      total_comments: dataReview.comment || dataReview.title
+      total_comments: dataReview.dataValues.comment || dataReview.dataValues.title
         ? prevData.total_comments - 1
         : prevData.total_comments,
     });

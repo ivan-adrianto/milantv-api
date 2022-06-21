@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "start": "(cd api-gateway && npm start) & (cd service-movies && npm start) & (cd service-user && npm start) & (cd service-media && npm start)"
+  }
+}
