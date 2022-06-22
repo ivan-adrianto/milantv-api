@@ -2,13 +2,14 @@ const bcrypt = require("bcrypt");
 const { User } = require("../../../models");
 const Validator = require("fastest-validator");
 const v = new Validator();
+const { default: axios } = require("axios");
+const { GATEWAY_URL } = process.env;
 
 module.exports = async (req, res) => {
   try {
     const schema = {
       fullname: "string|empty:false",
       email: "email|empty:false",
-      password: "string|min:6",
       username: "string|empty:false",
       avatar: "string|optional",
     };
@@ -55,14 +56,24 @@ module.exports = async (req, res) => {
         });
       }
     }
-
-    const password = await bcrypt.hash(req.body.password, 10);
-    const { fullname, avatar } = req.body;
+    let avatar = "";
+    if (req.body.photo) {
+      try {
+        const res = await axios.post(`${GATEWAY_URL}/media`, {
+          image: req.body.photo,
+        });
+        avatar = res.data.data.image
+      } catch (error) {
+        return res.status(500).json({
+          status: "error",
+          message: error.response?.data?.message || error.message,
+        });
+      }
+    }
 
     await user.update({
+      fullname: req.body.fullname,
       email,
-      password,
-      fullname,
       username,
       avatar,
     });
@@ -71,7 +82,7 @@ module.exports = async (req, res) => {
       status: "success",
       data: {
         id: user.id,
-        fullname,
+        fullname: req.body.fullname,
         email,
         username,
         avatar,
