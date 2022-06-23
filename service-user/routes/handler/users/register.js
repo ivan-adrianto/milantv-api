@@ -49,7 +49,7 @@ module.exports = async (req, res) => {
     let avatar = "";
     if (req.body.photo) {
       try {
-        avatar = await axios.post(`${GATEWAY_URL}/media/media`, {
+        avatar = await axios.post(`${GATEWAY_URL}/media`, {
           image: req.body.photo,
         });
       } catch (error) {
