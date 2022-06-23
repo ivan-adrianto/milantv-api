@@ -75,7 +75,7 @@ module.exports = async (req, res) => {
       fullname: req.body.fullname,
       email,
       username,
-      avatar,
+      avatar: avatar || user.avatar,
     });
 
     return res.json({
