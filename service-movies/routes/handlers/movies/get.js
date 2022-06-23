@@ -30,6 +30,7 @@ module.exports = async (req, res) => {
       data: movies,
     });
   } catch (error) {
+    console.log('error', error)
     res.status(500).json({
       status: "error",
       message: error.message,

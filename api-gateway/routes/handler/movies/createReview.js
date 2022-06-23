@@ -5,8 +5,8 @@ const api = apiAdapter(URL_SERVICE_MOVIE);
 
 module.exports = async (req, res) => {
   try {
-    let body = req.body
-    body.user_id = req.user.data.id
+    let body = req.body;
+    body.user_id = req.user.data.id;
     const review = await api.post("/reviews", body);
     return res.json(review.data);
   } catch (error) {
@@ -15,8 +15,11 @@ module.exports = async (req, res) => {
         .status(500)
         .json({ status: "error", message: "service unavailable" });
     }
-
-    const { status, data } = error.response;
-    return res.status(status).json(data);
+    if (error.response) {
+      const { status, data } = error.response;
+      return res.status(status).json(data);
+    } else {
+      return res.status(500).json({ status: "error", message: error.message });
+    }
   }
 };

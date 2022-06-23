@@ -5,7 +5,9 @@ const api = apiAdapter(URL_SERVICE_MOVIE);
 
 module.exports = async (req, res) => {
   try {
-    const movie = await api.get(`/movies/${req.params.id}?user_id=${req.user.data.id}`);
+    const movie = await api.get(
+      `/movies/${req.params.id}?user_id=${req.user.data.id}`
+    );
     return res.json(movie.data);
   } catch (error) {
     if (error.code === "ECONNREFUSED") {
@@ -13,8 +15,11 @@ module.exports = async (req, res) => {
         .status(500)
         .json({ status: "error", message: "service unavailable" });
     }
-
-    const { status, data } = error.response;
-    return res.status(status).json(data);
+    if (error.response) {
+      const { status, data } = error.response;
+      return res.status(status).json(data);
+    } else {
+      return res.status(500).json({ status: "error", message: error.message });
+    }
   }
 };

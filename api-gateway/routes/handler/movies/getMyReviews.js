@@ -13,8 +13,11 @@ module.exports = async (req, res) => {
         .status(500)
         .json({ status: "error", message: "service unavailable" });
     }
-
-    const { status, data } = error.response;
-    return res.status(status).json(data);
+    if (error.response) {
+      const { status, data } = error.response;
+      return res.status(status).json(data);
+    } else {
+      return res.status(500).json({ status: "error", message: error.message });
+    }
   }
 };
