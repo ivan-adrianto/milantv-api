@@ -5,7 +5,6 @@ const getMovieByCategory = require("./getMovieByCategory");
 const createReview = require("./createReview");
 const getReviews = require("./getReviews");
 const getMyReviews = require("./getMyReviews");
-const getReviewDetail = require("./getReviewDetail");
 const updateReview = require("./updateReview");
 const deleteReview = require("./deleteReview");
 const getActors = require("./getActors");
@@ -21,7 +20,6 @@ module.exports = {
   createReview,
   getReviews,
   getMyReviews,
-  getReviewDetail,
   getActors,
   createWatchlist,
   deleteWatchlist,
