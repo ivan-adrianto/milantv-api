@@ -1,14 +1,12 @@
 const apiAdapter = require("../../apiAdapter");
-const { URL_SERVICE_MOVIE } = process.env;
+const { URL_SERVICE_USER } = process.env;
 
-const api = apiAdapter(URL_SERVICE_MOVIE);
+const api = apiAdapter(URL_SERVICE_USER);
 
 module.exports = async (req, res) => {
   try {
-    const review = await api.get(`/reviews/${req.params.id}`, {
-      params: { token: req.headers.authorization },
-    });
-    return res.json(review.data);
+    const user = await api.get("/users/");
+    return res.json(user.data);
   } catch (error) {
     if (error.code === "ECONNREFUSED") {
       return res
