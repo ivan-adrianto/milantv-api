@@ -6,7 +6,7 @@ const fs = require("fs");
 
 const { Media } = require("../models");
 
-const { HOSTNAME } = process.env;
+const { FOLDER_URL } = process.env;
 
 router.get("/", async (req, res) => {
   const media = await Media.findAll({
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
   });
 
   const mappedMedia = media.map((m) => {
-    m.image = `${HOSTNAME}/${m.image}`;
+    m.image = `${FOLDER_URL}/${m.image}`;
     return m;
   });
 
@@ -46,7 +46,7 @@ router.post("/", (req, res) => {
         status: "success",
         data: {
           id: media.id,
-          image: `${HOSTNAME}/images/${filename}`,
+          image: `${FOLDER_URL}/images/${filename}`,
         },
       });
     });
