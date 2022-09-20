@@ -1,5 +1,6 @@
 {
   "scripts": {
-    "start": "(cd api-gateway && npm start) & (cd service-movies && npm start) & (cd service-user && npm start) & (cd service-media && npm start)"
+    "start": "(cd api-gateway && npm start) & (cd service-movies && npm start) & (cd service-user && npm start) & (cd service-media && npm start)",
+    "install": "(cd api-gateway && npm install) & (cd service-movies && npm install) & (cd service-user && npm install) & (cd service-media && npm install)"
   }
 }
